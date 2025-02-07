@@ -70,3 +70,32 @@ video {
         width: 100%;
     }
 }
+/*¸¡¶¯°®ÐÄ*/
+    .heart {
+    position: fixed;
+    color: #ff69b4;
+    font-size: 20px;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+.gallery img {
+    transform: scale(0);
+    animation: bloom 2s ease-in-out forwards;
+}
+
+@keyframes bloom {
+    to {
+        transform: scale(1);
+    }
+}

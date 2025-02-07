@@ -127,9 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="images" />
     <None Include="index.html" />
     <None Include="script.js" />
     <None Include="style.css" />
+    <None Include="videos" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="memory.mp4" />
+    <Media Include="videos.mp4" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
