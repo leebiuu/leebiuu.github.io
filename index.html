@@ -1,10 +1,27 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <title>给聂沛琪的情人节惊喜 ❤️</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .heart {
+            position: fixed;
+            top: -1vh;
+            font-size: 24px;
+            color: #ff69b4;
+            animation: fall 3s linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh);
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <h1>亲爱的 [聂沛琪小公主] ❤️</h1>
@@ -17,21 +34,42 @@
         <p>从第一次见到你的那一刻起，我的心就像被一道温暖的光照亮。你的笑容如同春日里最灿烂的花朵，每一次绽放都让我陶醉不已。我们一起走过的时光，就像一首动听的旋律，每一个音符都充满了甜蜜和幸福。我想告诉你，你是我生命中最美好的遇见，我希望能一直陪伴在你身边，守护着你，直到永远。</p>
         <!-- 图片 -->
         <div class="gallery">
-            <img src="images/photo1.jpg" alt="我们的照片">
+            <!-- 修正图片文件名可能的错误 -->
+            <img src="images/photo1.jpg.jpg" alt="我们的照片">
+            <img src="images/photo.jpg" alt="另一张照片">
         </div>
 
         <!-- 视频 -->
-        <video width="640" height="360" controls>
-            <source src="videos/a.mp4" type="video/mp4">
+        <video id="myVideo" width="640" height="360" controls>
+            <!-- 修正视频文件名可能的错误 -->
+            <source src="videos/a.mp4.mp4" type="video/mp4">
             你的浏览器不支持播放此视频。
         </video>
 
         <!-- 背景音乐 -->
-        <audio autoplay loop>
-            <source src="sound.mp3" type="audio/mpeg">
+        <audio id="backgroundMusic" autoplay loop>
+            <!-- 修正音频文件名可能的错误 -->
+            <source src="sound.mp3.mp3" type="audio/mpeg">
         </audio>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 200);
+    </script>
 </body>
+
 </html>
